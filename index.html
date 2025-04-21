@@ -1,0 +1,118 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Название компании</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#"
+        ><img src="img/logo.png" alt="Лого" class="logo" /><span
+          >Название компании</span
+        ></a
+      >
+      <div class="header__inner">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+            <li class="nav__item">
+              <a href="#catalogue" class="nav__link">Продукция</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Доставка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="tel:8-800-555-35-35" class="phone">8-800-555-35-35</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1 class="title">Доставка нерудных материалов напрямую с карьеров ЛО</h1>
+      <button class="hero__btn">Заказать</button>
+    </section>
+
+    <section class="section advantages" id="advantages">
+      <div class="container">
+        <h2 class="subtitle">Наши преимущества</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item">Свой автопарк</li>
+          <li class="advantages__item">Работаем 10 лет</li>
+          <li class="advantages__item">Сертификаты ГОСТ</li>
+          <li class="advantages__item">Опт и розница</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section catalogue" id="catalogue">
+      <div class="container">
+        <h2 class="subtitle">Каталог продукции</h2>
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <img class="catalog__img" src="img/stone.jpg" alt="Щебень" />
+            <div class="catalog__inner">
+              <p class="catalog__descr">Щебень от 1200₽/м³</p>
+              <button class="catalog__btn">Заказать</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__img" src="img/sand.webp" alt="Песок" />
+            <div class="catalog__inner">
+              <p class="catalog__descr">Песок от 950₽/м³</p>
+              <button class="catalog__btn">Заказать</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__img" src="img/gravel.jpg" alt="Гравий" />
+            <div class="catalog__inner">
+              <p class="catalog__descr">Гравий от 1100₽/м³</p>
+              <button class="catalog__btn">Заказать</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__img" src="img/elimination.webp" alt="Отсев" />
+            <div class="catalog__inner">
+              <p class="catalog__descr">Отсев от 900₽/м³</p>
+              <button class="catalog__btn">Заказать</button>
+            </div>
+          </li>
+          <li class="catalog__item">
+            <img class="catalog__img" src="img/earth.webp" alt="Земля" />
+            <div class="catalog__inner">
+              <p class="catalog__descr">Земля от 850₽/м³</p>
+              <button class="catalog__btn">Заказать</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section reviews">
+      <div class="container">
+        <h2 class="subtitle">Отзывы клиентов</h2>
+        <ul class="reviews__list">
+          <li class="reviews__item">"Привезли вовремя, качество отличное!"</li>
+          <li class="reviews__item">"Хорошие цены, довольны работой!"</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <h2 class="subtitle">Оставьте заявку</h2>
+      <form class="form">
+        <input type="text" placeholder="Ваше имя" />
+        <input type="tel" placeholder="Телефон" />
+        <textarea rows="4" placeholder="Комментарий"></textarea>
+        <button type="submit" class="button">Отправить</button>
+      </form>
+      <span>
+        © 2025 Название компании — Продажа и доставка нерудных материалов
+      </span>
+    </footer>
+  </body>
+</html>

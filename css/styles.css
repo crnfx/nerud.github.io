@@ -1,0 +1,299 @@
+:root {
+    --main-text: #333333;
+    --white-text: #FFFFFF;
+    --focus--colorBtns: #D1A9F0;
+    --focus-color: #C283F3;
+    --hover-color: #9D5CD0;
+    --active-color: #7943A4;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('MullerLight.eot');
+    src: local('MullerLight'), local('Muller-Light'),
+        url('../fonts/MullerLight.woff2') format('woff2'),
+        url('../fonts/MullerLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('MullerRegular.eot');
+    src: local('MullerRegular'), local('Muller-Regular'),
+        url('../fonts/MullerRegular.woff2') format('woff2'),
+        url('../fonts/MullerRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('MullerMedium.eot');
+    src: local('MullerMedium'), local('Muller-Medium'),
+        url('../fonts/MullerMedium.woff2') format('woff2'),
+        url('../fonts/MullerMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('MullerBold.eot');
+    src: local('MullerBold'), local('MullerrBold'),
+        url('../fonts/MullerBold.woff2') format('woff2'),
+        url('../fonts/MullerBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*  */
+
+body {
+    min-width: 320px;
+    font-family: 'Muller', sans-serif;
+    background-color: #FFFFFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background: #ffffff;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    margin-right: 12px;
+}
+
+.header__inner {
+    display: flex;
+    gap: 24px;
+}
+
+.nav__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 24px;
+}
+
+.hero {
+    margin-top: 80px;
+    height: 600px;
+    background: #ddd;
+    padding: 30px 80px;
+    text-align: center;
+    background-image: url(../img/quarry.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero__btn {
+    padding: 16px 32px;
+    font-size: 16px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.section {
+    margin-bottom: 48px;
+}
+
+.subtitle {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.advantages__item {
+    position: relative;
+    padding: 12px 12px 36px 12px;
+    background-color: rgb(221, 219, 219);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.advantages__item:first-child::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/truck.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+.advantages__item:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/sign-turn-slight-right.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+.advantages__item:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/file-text.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+.advantages__item:last-child::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/cart-check.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
+
+.catalog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.catalog__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+
+.catalog__img {
+    height: 230px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.catalog__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.catalog__btn {
+    align-self: flex-end;
+    padding: 16px 32px;
+    font-size: 16px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.form input,
+.form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+footer {
+    padding: 40px 80px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+.button {
+    background: orange;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+}
