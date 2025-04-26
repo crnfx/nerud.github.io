@@ -1,5 +1,6 @@
 const menu = document.querySelector(".nav__mobile");
 const burger = document.querySelector(".header__burger");
+const links = document.querySelectorAll(".nav__mobile .nav__link");
 
 burger.addEventListener("click", () => {
   menu.classList.toggle("nav__mobile--active");
@@ -10,6 +11,14 @@ burger.addEventListener("click", () => {
   } else {
     document.body.style.overflow = "visible";
   }
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("nav__mobile--active");
+    burger.classList.remove("header__burger--active");
+    document.body.style.overflow = "visible";
+  });
 });
 
 const swiper = new Swiper(".mySwiper", {
