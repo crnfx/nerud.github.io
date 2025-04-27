@@ -240,6 +240,14 @@ body {
   margin-bottom: 24px;
 }
 
+.about__descr span {
+  display: block;
+}
+
+.about__descr span:not(:last-child) {
+  margin-bottom: 12px;
+}
+
 .advantages__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
