@@ -36,10 +36,10 @@ const swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
 });
 
-const form = document.querySelector(".location__form");
-const validation = new JustValidate("#form");
+const form = document.getElementById("form");
+const validation = new JustValidate(form);
 
-validation.onSuccess((event) => {
+validation.onSuccess(async (event) => {
   event.preventDefault();
   console.log("Validation passes and form submitted");
 
@@ -47,7 +47,7 @@ validation.onSuccess((event) => {
   const formData = new FormData(form);
 
   try {
-    const response = fetch(form.action, {
+    const response = await fetch(form.action, {
       method: "POST",
       body: formData,
     });
@@ -56,7 +56,7 @@ validation.onSuccess((event) => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const result = response.text();
+    const result = await response.text();
     console.log("Success:", result);
     alert("Форма успешно отправлена!");
     form.reset();
