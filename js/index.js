@@ -35,3 +35,33 @@ const swiper = new Swiper(".mySwiper", {
   },
   spaceBetween: 30,
 });
+
+const form = document.querySelector(".location__form");
+const validation = new JustValidate("#form");
+
+validation.onSuccess((event) => {
+  event.preventDefault();
+  console.log("Validation passes and form submitted");
+
+  const form = event.target;
+  const formData = new FormData(form);
+
+  try {
+    const response = fetch(form.action, {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const result = response.text();
+    console.log("Success:", result);
+    alert("Форма успешно отправлена!");
+    form.reset();
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Произошла ошибка при отправке формы.");
+  }
+});
