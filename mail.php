@@ -27,7 +27,7 @@ try {
   $mail->CharSet = "UTF-8";
   $mail->SMTPAuth = true;
 
-  $mail->Host = 'smtp.mail.com'; // SMTP сервера вашей почты
+  $mail->Host = 'smtp.mail.ru'; // SMTP сервера вашей почты
   $mail->Username = 'roman_sharapov1337@mail.ru'; // Логин на почте
   $mail->Password = 'V1FXsguyC2wPgPiBXy6W'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
