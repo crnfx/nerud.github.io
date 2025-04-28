@@ -27,16 +27,16 @@ try {
   $mail->CharSet = "UTF-8";
   $mail->SMTPAuth = true;
 
-  $mail->Host = 'smtp.mail.ru'; // SMTP сервера вашей почты
-  $mail->Username = 'roman_sharapov1337@mail.ru'; // Логин на почте
-  $mail->Password = 'V1FXsguyC2wPgPiBXy6W'; // Пароль на почте
+  $mail->Host = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+  $mail->Username = 'Lider-atp@yandex.ru'; // Логин на почте
+  $mail->Password = 'yuiiexzbnhuxyicr'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 
-  $mail->setFrom('roman_sharapov1337@mail.ru', 'Заявка с сайта'); // Адрес самой почты и имя отправителя
+  $mail->setFrom('Lider-atp@yandex.ru', 'Заявка с сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('roman_sharapov1337@mail.ru');
+  $mail->addAddress('Lider-atp@yandex.ru');
 
   // Отправка сообщения
   $mail->isHTML(true);
