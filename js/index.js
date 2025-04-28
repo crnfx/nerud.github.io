@@ -79,7 +79,6 @@ phoneInput.addEventListener("input", function () {
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  console.log("Form submitted");
 
   const formData = new FormData(form);
 
@@ -93,9 +92,8 @@ form.addEventListener("submit", async (event) => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const result = await response.text();
-    console.log("Success:", result);
     modalOverlay.style.display = "flex";
+    button.disabled = true;
     form.reset();
   } catch (error) {
     console.error("Error:", error);
