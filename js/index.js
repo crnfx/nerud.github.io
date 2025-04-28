@@ -36,14 +36,51 @@ const swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
 });
 
+const modalOverlay = document.querySelector(".modal-overlay");
+const closeButtons = document.querySelectorAll(".modal__close");
+
+closeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    modalOverlay.style.display = "none";
+  });
+});
+
+modalOverlay.addEventListener("click", (e) => {
+  if (e.target === modalOverlay) {
+    modalOverlay.style.display = "none";
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modalOverlay.style.display !== "none") {
+    modalOverlay.style.display = "none";
+  }
+});
+
 const form = document.getElementById("form");
-const validation = new JustValidate(form);
+const button = document.getElementById("button");
+const agreementCheckbox = document.getElementById("checkbox");
+const phoneInput = document.getElementById("tel");
 
-validation.onSuccess(async (event) => {
+function updateButtonState() {
+  const isPhoneValid = phoneInput.value.trim() !== "";
+  const isCheckboxChecked = agreementCheckbox.checked;
+  button.disabled = !(isPhoneValid && isCheckboxChecked);
+}
+
+updateButtonState();
+
+agreementCheckbox.addEventListener("change", updateButtonState);
+phoneInput.addEventListener("input", updateButtonState);
+
+phoneInput.addEventListener("input", function () {
+  this.value = this.value.replace(/[^\d+()-]/g, "");
+});
+
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  console.log("Validation passes and form submitted");
+  console.log("Form submitted");
 
-  const form = event.target;
   const formData = new FormData(form);
 
   try {
@@ -58,7 +95,7 @@ validation.onSuccess(async (event) => {
 
     const result = await response.text();
     console.log("Success:", result);
-    alert("Форма успешно отправлена!");
+    modalOverlay.style.display = "flex";
     form.reset();
   } catch (error) {
     console.error("Error:", error);

@@ -444,6 +444,88 @@ tr:nth-child(even) {
   list-style: none;
 }
 
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 1000;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal__close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #777;
+  transition: color 0.2s;
+}
+
+.modal__close:hover {
+  color: #333;
+}
+
+.modal__content {
+  padding: 20px 0;
+}
+
+.modal__subtitle {
+  font-size: 22px;
+  margin: 0;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.modal__descr {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: center;
+}
+
+.modal__close--bot {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+}
+
+.modal__close--bot:hover {
+  background: #45a049;
+}
+
 @media (max-width: 1100px) {
   .nav {
     display: none;

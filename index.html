@@ -256,7 +256,7 @@
             <input type="checkbox" id="checkbox">
             <span>Согласие на обработку персональных данных</span>
           </label>
-          <button type="submit" class="button">Отправить</button>
+          <button type="submit" class="button" id="button">Отправить</button>
         </form>
         <span>
           © 2025 АТП ЛИДЕР — Продажа и доставка нерудных материалов
@@ -293,7 +293,20 @@
         </svg></a>
     </li>
   </ul>
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="modal__header">
+        <button type="button" class="modal__close modal__close--head">×</button>
+      </div>
+      <div class="modal__content">
+        <h3 class="modal__subtitle">Заявка успешно отправлена!</h3>
+        <p class="modal__descr">С Вами обязательно свяжутся в ближайшее время.</p>
+      </div>
+      <div class="modal__footer">
+        <button type="button" class="modal__close modal__close--bot">Закрыть</button>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/index.js" type="module"></script>
 </body>
